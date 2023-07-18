@@ -24,13 +24,13 @@
 
 (2) Controller에서 model.addattribute를 활용해 뷰에서 보여줄 텍스트 정의
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/088898f8-cc81-47b4-89f3-86a7493e094b/Untitled.png)
+<img width="766" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/e9cbafcd-9af9-4e72-957b-b052fc5b3f8f">
 
 - html 내 th:text가 붙은 태그 안에서 ${data} 라는 부분을 “Hello-Spring”으로 대체한다. 라는 뜻
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/44dcbd63-e531-4efa-afd6-62e4f2fc758d/Untitled.png)
+<img width="724" alt="1" src="https://github.com/HyemIin/TIL/assets/114489245/26c4e3e9-5fde-4ba8-96cf-8ea60f2c47cb">
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/84cf8b7c-02a9-49d3-bc08-071042eac0ea/Untitled.png)
+<img width="669" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/049a32d8-4a51-458f-a0b2-b406b5981367">
 
 이러케 나옴
 
@@ -52,11 +52,11 @@ HTML 컨텐츠 영역에서 직접 출력하기 위해선
 - **타임리프는 escape 지원이 디폴트값이다.**
 - 타임리프에서 escape를 비활성화하기 위해서 사용하는 것이 “th:utext” 이다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0216ece2-a455-495e-9a9c-81d7471fc1bf/Untitled.png)
+<img width="777" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/33c017ea-041e-4030-9939-434d58556e79">
 
 위와 같이 HTML태그를 넣어서 사용하고 싶을 땐,
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9027d690-156a-4aab-9cd2-7bf62bd0a81d/Untitled.png)
+<img width="811" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/d1c44870-2b52-4b02-addf-0d111bc31101">
 
 (1) th:utext 태그를 사용하여 unescape를 활성화 한다.
 
@@ -64,7 +64,7 @@ HTML 컨텐츠 영역에서 직접 출력하기 위해선
 
 - 두번째 괄호를 대괄호가 아닌 소괄호로 변경한다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4daec229-b3c9-4cf7-8297-a7a91652d63f/Untitled.png)
+<img width="623" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/26963c4c-0587-428d-aa17-bb6f766f3672">
 
 바뀐거 확인가능
 
@@ -130,27 +130,27 @@ HTML 컨텐츠 영역에서 직접 출력하기 위해선
 
 - 사칙 연산은 그냥 써도 결과가 나온다
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/091457d8-926f-457d-a2e0-0a55484472d9/Untitled.png)
+<img width="632" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/2a7f9644-6a5f-4950-b761-13930df43a55">
 
 - 비교 연산은 꺽쇠를 어떻게 쓸 것인지 주의해서 써야한다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cbfb0830-5f73-47c7-a37d-995949269827/Untitled.png)
+<img width="693" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/ff90a42f-fe7e-4b6c-afb7-327fbae68810">
 
 # 8. 타임리프 속성 값 설정
 
 - 아래와 같은 코드를 볼 때, name의 mock이라는 것을 th:name이라는 타임리프 속성값 설정으로 통해 userA로 대체할 수 있다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/92389227-952d-4368-a47f-394554e42db3/Untitled.png)
+<img width="639" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/d005ff60-ad90-4507-b4bc-e6a0f6f0c29b">
 
 ## 1) 속성 추가하는 법
 
 - 타임리프를 활용하여 html 속성을 동적으로 변경할 수 있다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/74965d50-2dfd-4ebd-9acb-989dfc3fb1e2/Untitled.png)
+<img width="851" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/2f6cdb79-39d3-4b2e-ab70-db8d3a577af1">
 
 위와 같은 코드가 웹을 거치면 아래처럼 변한다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/24ed211a-1ba6-47bf-88d4-aafe390268c9/Untitled.png)
+<img width="605" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/addb0fd6-2503-4333-b28c-ec1ac6c02172">
 
 - attrappend=”class=’ large’”를 보면, class라는 속성 뒤에 “띄어쓰기+large:라는 텍스트가 추가된 것을 확인할 수 있다.
 - attrpretend는 반대다.(앞에 붙음)
@@ -170,11 +170,11 @@ HTML 컨텐츠 영역에서 직접 출력하기 위해선
 
 - 타임리프의 코드를 반복하고 싶을 때 사용하는 방법에 대해 알아보자
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e8c20bd5-9f40-4f94-92a0-a5e7e765630e/Untitled.png)
+<img width="590" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/bd7f7228-9aa8-479a-9096-5a56c693a31c">
 
 - th:each라는 것을 사용한다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9fffb576-84cd-4135-851b-1be1ab27985c/Untitled.png)
+<img width="309" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/da658322-c500-4eb3-a9bd-1937cd1738fc">
 
 - th:each라는 반복문을 통해 각 기존 객체 리스트에 담긴 user 객체 A,B,C가 순서대로 타임리프 코드 ${users}에 대입된 후, user라는 변수에 담겨 아래 코드를 반복적으로 수행하는 것을 확인할 수 있다.
 
@@ -182,7 +182,7 @@ HTML 컨텐츠 영역에서 직접 출력하기 위해선
 
 - 반복 상태를 유지하는 법
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2a508455-ca1e-47b3-b8ec-7df46fb488a8/Untitled.png)
+<img width="621" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/9674802e-2972-4e0e-ad1d-5d540f47ab24">
 
 - 바로바로, 두번째 파라미터를 설정하는 것. 이 그림에서는 userStat이라고 표현되어 있다.
 단, 이 두번째 파라미터는 생략가능하며, 기본적으로 1번째 변수명(user)+Stat로 자동 설정되니, 개발자는 숙지하여 사용할 수 있다!!
@@ -192,27 +192,27 @@ HTML 컨텐츠 영역에서 직접 출력하기 위해선
 - th:if 라는 문법을 사용한다.(if not 문을 쓰려면 th:unless 로 쓰면 된다)
 - 이 조건문을 충족해야만 해당 HTML 코드가 실행된다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/43a3ea0d-9c51-42cf-81db-cdb7b09dcc7f/Untitled.png)
+<img width="741" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/406d4922-96fe-40ed-91e3-a76a8b8af5ac">
 
 - 만약 user.age를 조회했을 때 해당 객체의 user.age가 20 미만(lt)이라면, 미성년자라는 글씨를 띄운다.
 - 또한 만약 user.age를 조회했을 때 해당 객체의 user.age가 20이상(ge)이 아니라면, 미성년자라는 글씨를 띄운다.
 - 아래는 그 결과다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c17d0a05-7e3e-460c-9237-7c4e22c5764f/Untitled.png)
+<img width="448" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/6f9446c6-549d-44de-b2f6-4793638a5eeb">
 
 - BasicController에서 user 객체별 이름과 나이를 아래와 같이 지정했다. 당연히 UserA외 모두 20살 이상이므로, “미성년자”라는 워딩은 UserA에서만 나오게 된다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f3051a17-a986-46c9-86b2-9a4a174c8a5b/Untitled.png)
+<img width="618" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/eadd4095-cac1-40cd-abd3-cfd69ecc7c6c">
 
 ## 1) Switch,case로도 활용 가능하다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/807b2ffe-96a2-4f7d-b685-ea2daf25b579/Untitled.png)
+<img width="627" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/28a5823a-4128-4e26-809f-058959df7fc1">
 
 # 11. th:Block = 블록에 대해 알아보자
 
 - 묶음으로 th 태그를 적용하고 싶을 때 사용하는 태그이다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b5cfc32a-b718-426f-bb15-a81b5fbaddd0/Untitled.png)
+<img width="630" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/93ba8be4-8813-4a26-adab-00a689a75e86">
 
 - 위 코드를 보면, div로 태깅된 2개의 블록이 보인다. 이 2개의 div에 공통적으로 th:each를 적용하고자 할 때, <th :block> 태그로 감싸주면 된다.
 - 만약 하나의 블록에만 th태그를 적용할 것이라면, <div th:each~~> 식으로 쓰면 된다.
@@ -226,9 +226,9 @@ HTML 컨텐츠 영역에서 직접 출력하기 위해선
 <script th:inline="javascript">
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1b2124bb-aa98-4dd9-9557-b221a5f01a01/Untitled.png)
+<img width="648" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/ae6756a4-b607-409a-af71-908fd31e8503">
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d18dfc31-4e48-4fa8-8e97-5ac492fe70a9/Untitled.png)
+<img width="521" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/3bbb818c-1b85-4eca-bef5-e0d82a02de15">
 
 - <script th:inline="javascript">을 사용한다면, 아래와 같은 이점을 얻을 수 있다.
     - 변수에 저장되는 문자,숫자를 구분해준다(문자는 쌍따옴표 처리 등)
@@ -237,11 +237,11 @@ HTML 컨텐츠 영역에서 직접 출력하기 위해선
 - 또한 자바스크립트 인라인은 th:each도 허용한다.
     - [# th:each~] 처럼 해시태그를 넣어주는 것이 핵심이다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/32e249d7-d0b4-403f-a48e-3b8ee2eaccb7/Untitled.png)
+<img width="477" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/e832ea5a-e45d-46de-abbd-56db6d13d6e6">
 
 - 아래와 같은 결과가 나온다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/77613a2b-cd5c-4541-aa81-f6dae80bff1c/Untitled.png)
+<img width="373" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/a896e4e8-561e-4b40-a1fd-8c29a747d713">
 
 # 12. 템플릿 조각
 
@@ -249,26 +249,26 @@ HTML 컨텐츠 영역에서 직접 출력하기 위해선
 - (Why) 이런 문제를 해결하기 위해 템플릿 조각이 등장했다.
 - 템플릿 조각을 활용한다면, 웹 페이지 중 특정 태그를 다른 html 파일 내 태그로 대체할 수 있다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9c8574e3-2203-44c8-9783-40a3c4c658bd/Untitled.png)
+<img width="590" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/d30d0259-1bc2-4688-91ef-d33d20ac0f0d">
 
 - 방법은 insert,replace가 있다.
 - 경로 :: footer name을 적어주면 해당 부분이 대체된다.
     - <footer> 태그 전체가 들어오는 것을 확인할 수 있다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/814330d8-7d5c-4d59-9a8a-6d1c9c484823/Untitled.png)
+<img width="375" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/661d51f4-62ef-4444-9452-aff84467da0b">
 
 - 파라미터를 넣을 수도 있다.
     - copyParam이라는 footer가 param1,2를 매개변수로 받는 footer이다. 그리고 각각 param1,2를 화면에 출력하는 footer인 것을 가정했다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2e8f6f8a-25e5-415f-a7fa-4dab6d5fce59/Untitled.png)
+<img width="603" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/bb78a93d-bdcb-4ba9-b301-a4710fa69a89">
 
 - 이를 활용하기 위해선, 아래와 같이 템플릿 조각 문법을 지키면서 파라미터를 “데이터1”,”데이터2”로 설정하여 활용할 수 있다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/08e558bd-8242-411a-9139-2425c918fcf9/Untitled.png)
+<img width="796" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/f0e1ff0f-1a4a-409b-ac72-feb405d97703">
 
 결과
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/906b9df3-7be2-4dc9-926f-408c9e2ac100/Untitled.png)
+<img width="532" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/b07d3d09-a7ae-4469-bf24-b9585d9473f8">
 
 # 13. 템플릿 레이아웃
 
@@ -276,16 +276,14 @@ HTML 컨텐츠 영역에서 직접 출력하기 위해선
 - (why) 공통으로 사용하는 부분은 그대로 유지하되, 각 페이지마다 필요한 정보를 추가해서 사용하고 싶을 때 활용하는 방법이다.
 
 **[layoutmain.html]**
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bee602fe-7b81-42a0-a85b-24eaaaf0d188/Untitled.png)
+<img width="695" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/1be39e7b-adee-4ad8-8c94-c56e067e3589">
 
 - 위 코드를 봐보자.
 - 나는 base.html에 있는 공통 부분을 layoutMain.html 코드에 포함시키고자 한다.
 - 빨간색 박스에서 보면, 마지막에 ~{::title},~{::link} 라는 코드가 있는데,  태그에 내가 옮기고자하는 title태그와 link태그를 담은 후, common_header라는 th:fragment 를 가진 코드(base.html)에 적용하고 불러온다는 뜻이다.
 
 **[base.html]**
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8b1c5767-54b7-4c77-a774-27f8ff196e86/Untitled.png)
+<img width="750" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/830460b7-6d1d-4e1a-8a99-f8c608bde187">
 
 - 위 코드는 앞서 말한 common_header라는 th:fragment를 가진 html 코드이다.
 - common_header는 매개변수로 title,links를 가진다고 설정해놨기 때문에, 앞서 담았던 title과 link를 그대로 적용할 수 있는 기반을 갖췄다.
@@ -297,7 +295,7 @@ HTML 컨텐츠 영역에서 직접 출력하기 위해선
 http://localhost:8080/template/layout
 위 url은 layoutmain.html을 띄우는 url이다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/51b612ad-0f8f-4a3f-9436-3dbb57d7b48f/Untitled.png)
+<img width="780" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/60f459b1-d1b6-4dd9-97cd-a5212160f0eb">
 
 - title 태그를 보면, 기존에 common_header 매개변수로 담았던 title이 그대로 적용됐다.
 - base.html에 있던 공통 link 태그는 그대로 나오면서
@@ -316,7 +314,7 @@ http://localhost:8080/template/layout
 - 사실 위에서 했던거..HTML 전체에 공통적으로 적용할 수 있다.
 - 만약 100개의 HTML 파일이 있는데, title은 각 페이지마다 다르고, footer가 모두 동일해야하는 상황이라 가정해보자.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/57465dda-d09b-4ad9-b02a-608dc46bfc21/Untitled.png)
+<img width="709" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/408a1b06-00dd-4257-a239-519fb22428c8">
 
 - 과정은 위랑 똑같긴 함
 - 맨 위 <html th:fragment= “layout(title,content)” 이부분 보면, footer는 따로 매개변수로 받지 않음. 즉 footer는 위 코드에 적용된 footer로 고정하겠다는 뜻이다.
