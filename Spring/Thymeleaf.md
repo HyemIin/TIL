@@ -319,3 +319,41 @@ http://localhost:8080/template/layout
 - 과정은 위랑 똑같긴 함
 - 맨 위 <html th:fragment= “layout(title,content)” 이부분 보면, footer는 따로 매개변수로 받지 않음. 즉 footer는 위 코드에 적용된 footer로 고정하겠다는 뜻이다.
 - 그럼 변하는 건 title과 content 파트라고 할 수 있다.
+
+
+# 1. 타임리프 스프링 통합
+
+- 스프링EL 문법 통합
+- 스프링 빈 호출 지원(타임리프 문법에서 @빈이름으로 부를 수 있음)
+- 스프링 메세지, 국제화 기능의 편리한 통합(국제화 : 접속 국가에 따라 언어 변경 기능)
+- 스프링 검증, 오류 처리 통합
+- 스프링 변환 서비스 통합
+
+## 1) 타임리프 - 스프링 적용 방법
+
+- 사실 이건 굉장히 쉽다.. 우리도 알고 있듯,, dependecy에 의존성 추가만 해주면 된다.
+`implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'`
+- 좀 더 자세히 설명하자면, 위 의존성 추가를 통해 타임리프 템플릿 엔진을 스프링 빈에 등록하고, 타임리프용 뷰 리졸버를 스프링 빈으로 등록하는 것까지 자동으로 된다는 의미다.
+
+## 2) th:field 란?
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5d8a6c66-e2e9-4549-9d72-48b16d3e6206/Untitled.png)
+
+- (what?) HTML 태그의 id , name , value 속성을 자동으로 처리해주는 태그이다.
+(여러 속성을 하나로 묶어주는 ~~퉁치는~~ 좋은 태그)
+- 먼저, th:object=”${item}” 을 설정하면, 컨트롤러에서 넘긴 item 객체가 타임리프 코드 안으로(object) 넘어온다.
+- 이후 div 태그 내(바디 역할을 하는,,) th:field=”*{itemName}” 으로 작성한다면, 기존에 있던
+id=”itemName” name=”itemName” 을 쓰지 않아도 자동으로 렌더링 해준다.
+- 타임리프가 th:object에 담긴 객체 이름을 통해 id와 name을 자동 인식할 수 있기 때문이다.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6468e5b6-796a-4e52-9928-da634ef14e43/Untitled.png)
+
+- 위 결과 소스코드를 보면, name을 지웠어도 웹페이지 소스코드에는 뜨는 것을 알 수 있다.
+- (why?) field 설정을 함으로써 id,name, 객체가 가진 값(value)까지 한번에 출력할 수 있는 편리함을 제공한다.
+- 보다 명확히 효과를 확인하기 위해 아래 소스 코드를 가져왔다.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/49e3a080-5169-4f91-a95e-31ee782b3317/Untitled.png)
+
+- 위 코드는 th:field 를 쓴 코드이고, 아래 코드는 안쓴 코드이다. 확연히 위 코드가 간결한 것을 알 수 있다.
+아래 코드의 name, value,th:value 코드가 모두 사라졌기 때문이다.
+~~(사실 id도 지워도 되는데, 지우면 인텔리제이에서 빨간색 표시 넣어서 보기 싫어서 냅둠)~~
