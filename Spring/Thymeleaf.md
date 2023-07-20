@@ -357,3 +357,51 @@ id=”itemName” name=”itemName” 을 쓰지 않아도 자동으로 렌더�
 - 위 코드는 th:field 를 쓴 코드이고, 아래 코드는 안쓴 코드이다. 확연히 위 코드가 간결한 것을 알 수 있다.
 아래 코드의 name, value,th:value 코드가 모두 사라졌기 때문이다.
 ~~(사실 id도 지워도 되는데, 지우면 인텔리제이에서 빨간색 표시 넣어서 보기 싫어서 냅둠)~~
+- 또한!! th:field는 더 많은 일을 대신해준다.
+- 만약 checkbox타입에 th:field를 적용할 경우, 자동으로 히든타입과 name을 적용시켜 준다.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/48a14772-4fde-4ecd-9f98-5d2ecc076e9a/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/81e6ced1-dc22-4525-9103-5a0b31ab5250/Untitled.png)
+
+# 2. @ModelAttribute
+
+- 컨트롤러가 호출되서 모델을 사용할 일이 있으면, 무조건 특정 값이 담기도록 할 수 있는 어노테이션
+- 즉, 매번 GetMapping만들어서 model.adattribute(~~) 하지 않고, 공통으로 넣을 것이 있으면 이 어노테이션을 쓰면 된다.
+
+- 기존 작성
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d3344fac-6b25-474b-8d6f-462e4722b0da/Untitled.png)
+
+edit 뿐 아니라 add,상세화면 등에도 같은 내용이 들어가 줘야함.
+
+- @ModelAttribute 어노테이션 활용 후
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7f0872af-5b70-416c-ae66-4e9e585bb6d1/Untitled.png)
+
+이거 하나 있으면 매번 getMapping에 추가하지 않아도 자동으로 해당 데이터가 들어가는 것을 보장할 수 있음.
+
+- 어떤 원리냐면, 매번 getMapping에서 호출하는 것을 묶었다고 생각하면 됨.
+model.addAttribute(”regions”,regions) 가 컨트롤러 내 모든 메서드에 자동으로 들어감
+
+# 3. 체크박스-멀티
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6413fefa-6b29-48b5-9e5d-cd9b063e13ce/Untitled.png)
+
+- 위 사진 처럼 멀티 체크박스를 만들 수 있는 방법에 대해 알아보자.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7ea42e29-2279-49b5-93c1-781627e78172/Untitled.png)
+
+- 1) 컨트롤러에 @modelattribute 추가해서 뿌릴 데이터 정의할 것
+- 2) th:each로 region을 불러온다. (아까 만든 model.attribute)
+- 3) th:value : 보면, 아까 모델 어트리뷰트에 만든 서울,부산,제주 key 값을 의미한다.
+th:field에 있는 값은 item.java에 있는 regions에 담기는 List 값이다.
+- 4) 주의해야할 문제가 있는데, 반복문으로 체크박스를 생성하지만, 각각 체크박스 별로 id는 달라야한다.
+th:field가 있기 때문에 id를 개발자가 굳이 지정하지 않고도 자동으로 반복문 돌때마다 번호를 붙여주긴 하는데, 문제는 번호만 붙여주지, id 이름이 뭔지는 개발자가 지정해줘야하는 것이다.
+그렇기때문에 th:for=””${#ids.prev(’원하는 아이디 이름’)} 라는 태그를 통해, 아이디 이름을 지정해준다
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/49e3a080-5169-4f91-a95e-31ee782b3317/Untitled.png)
+
+- 위 코드는 th:field 를 쓴 코드이고, 아래 코드는 안쓴 코드이다. 확연히 위 코드가 간결한 것을 알 수 있다.
+아래 코드의 name, value,th:value 코드가 모두 사라졌기 때문이다.
+~~(사실 id도 지워도 되는데, 지우면 인텔리제이에서 빨간색 표시 넣어서 보기 싫어서 냅둠)~~
