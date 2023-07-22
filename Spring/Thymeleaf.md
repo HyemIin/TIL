@@ -337,7 +337,7 @@ http://localhost:8080/template/layout
 
 ## 2) th:field 란?
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5d8a6c66-e2e9-4549-9d72-48b16d3e6206/Untitled.png)
+<img width="893" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/065505d0-3cc2-4678-9875-5b1f955e67d8">
 
 - (what?) HTML 태그의 id , name , value 속성을 자동으로 처리해주는 태그이다.
 (여러 속성을 하나로 묶어주는 ~~퉁치는~~ 좋은 태그)
@@ -346,13 +346,13 @@ http://localhost:8080/template/layout
 id=”itemName” name=”itemName” 을 쓰지 않아도 자동으로 렌더링 해준다.
 - 타임리프가 th:object에 담긴 객체 이름을 통해 id와 name을 자동 인식할 수 있기 때문이다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6468e5b6-796a-4e52-9928-da634ef14e43/Untitled.png)
+<img width="791" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/b88adab9-fb6d-41bb-bc3b-c1bad547d50b">
 
 - 위 결과 소스코드를 보면, name을 지웠어도 웹페이지 소스코드에는 뜨는 것을 알 수 있다.
 - (why?) field 설정을 함으로써 id,name, 객체가 가진 값(value)까지 한번에 출력할 수 있는 편리함을 제공한다.
 - 보다 명확히 효과를 확인하기 위해 아래 소스 코드를 가져왔다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/49e3a080-5169-4f91-a95e-31ee782b3317/Untitled.png)
+<img width="829" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/518eab06-2c7a-4c1d-8e1d-66b923e9f849">
 
 - 위 코드는 th:field 를 쓴 코드이고, 아래 코드는 안쓴 코드이다. 확연히 위 코드가 간결한 것을 알 수 있다.
 아래 코드의 name, value,th:value 코드가 모두 사라졌기 때문이다.
@@ -360,9 +360,9 @@ id=”itemName” name=”itemName” 을 쓰지 않아도 자동으로 렌더�
 - 또한!! th:field는 더 많은 일을 대신해준다.
 - 만약 checkbox타입에 th:field를 적용할 경우, 자동으로 히든타입과 name을 적용시켜 준다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/48a14772-4fde-4ecd-9f98-5d2ecc076e9a/Untitled.png)
+<img width="763" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/9ab81d69-aaef-4aab-97ae-3a9a01c45ae1">
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/81e6ced1-dc22-4525-9103-5a0b31ab5250/Untitled.png)
+<img width="899" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/607e305e-efab-4eda-ad76-b2fea2cd34d7">
 
 # 2. @ModelAttribute
 
@@ -371,13 +371,13 @@ id=”itemName” name=”itemName” 을 쓰지 않아도 자동으로 렌더�
 
 - 기존 작성
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d3344fac-6b25-474b-8d6f-462e4722b0da/Untitled.png)
+<img width="635" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/508df262-5ad8-41c0-a5cf-87046e89c373">
 
 edit 뿐 아니라 add,상세화면 등에도 같은 내용이 들어가 줘야함.
 
 - @ModelAttribute 어노테이션 활용 후
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7f0872af-5b70-416c-ae66-4e9e585bb6d1/Untitled.png)
+<img width="664" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/8d059de7-8b0c-4844-86d0-fc19e3f9a7c0">
 
 이거 하나 있으면 매번 getMapping에 추가하지 않아도 자동으로 해당 데이터가 들어가는 것을 보장할 수 있음.
 
@@ -386,11 +386,12 @@ model.addAttribute(”regions”,regions) 가 컨트롤러 내 모든 메서드�
 
 # 3. 체크박스-멀티
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6413fefa-6b29-48b5-9e5d-cd9b063e13ce/Untitled.png)
+<img width="537" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/c509c351-3e21-4c0a-9e19-48dc4ce41575">
+
 
 - 위 사진 처럼 멀티 체크박스를 만들 수 있는 방법에 대해 알아보자.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7ea42e29-2279-49b5-93c1-781627e78172/Untitled.png)
+<img width="864" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/afbba40d-6bd3-45f7-b799-41d2806e93fd">
 
 - 1) 컨트롤러에 @modelattribute 추가해서 뿌릴 데이터 정의할 것
 - 2) th:each로 region을 불러온다. (아까 만든 model.attribute)
