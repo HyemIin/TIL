@@ -37,5 +37,3 @@ messages_ko.properties 등
 
 - addform.html에 적용한 메시지이다. page.addItem이라는 것을 message.properties에서 찾아서 가져올 것이다.
 <img width="500" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/ba42cd9d-6330-4cb9-8126-ba944d587857">
-
-그림 추가 예정
