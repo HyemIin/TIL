@@ -25,7 +25,7 @@ messages_ko.properties 등
 
 # 3-1. 메시지 쓸 때, 인텔리제이 UTF-8로 인코딩설정 해둬야한다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/82c1ab45-f544-4ef2-aab9-1f8f12b53fe5/Untitled.png)
+<img width="1025" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/c965e994-8acd-4012-8a75-36f09484bcb8">
 
 - 그리고 인텔리제이 재시작하면 된다. 아니면 한글 못씀;;
 
@@ -33,9 +33,9 @@ messages_ko.properties 등
 
 - 타임리프 메시지 표현식 : #{…} 을 사용하면 스프링의 메시지를 편리하게 조회할 수 있다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e63f91a7-d25e-4f87-a36e-0ed93e2bf41c/Untitled.png)
+<img width="671" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/7dc95829-06ec-4e32-bf59-1701f4a4723b">
 
 - addform.html에 적용한 메시지이다. page.addItem이라는 것을 message.properties에서 찾아서 가져올 것이다.
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7ad350ed-a19d-4986-987c-949dbc9a4520/Untitled.png)
+<img width="500" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/ba42cd9d-6330-4cb9-8126-ba944d587857">
 
 그림 추가 예정
