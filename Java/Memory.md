@@ -39,12 +39,14 @@
   위 코드에 의해 stack 메모리에 tmp = 15라는 값이 할당되며 + result = 5라는 값 또한 할당된다.
 
 현재 스택 메모리 상태.jpg
+
 <img width="795" alt="image" src="https://github.com/HyemIin/TIL/assets/114489245/16e0124c-3955-4f98-938c-c92e60943b28">
 
 - num = operator(num);
   위 코드가 실행됨에 따라 operator 메서드는 종료되고, operator에서 사용된 모든 지역변수는 Stack 메모리에서 pop 된다.
   
 최종 스택 메모리 상태.jpg
+
 <img width="817" alt="image" src="https://github.com/HyemIin/TIL/assets/114489245/7d7d3a2a-816b-45e2-8411-74113ff9e1bc">
 
 - 이후 main 메서드도 종료되면, 남아있던 num 데이터 값도 stack 메모리에서 pop 됨으로써 종료된다. 
