@@ -17,28 +17,28 @@
     - 서버에서 로그인을 성공하면, HTTP 응답에 쿠키를 담아서 브라우저에 전달할 것.
     - 브라우저는 앞으로 해당 쿠키를 지속해서 보내준다.
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5adb8fa7-1ca9-4a87-829e-f6520debc246/Untitled.png)
+    <img width="478" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/1ebb43ae-bb5a-4c51-893a-2f3835d3751b">
     
     - 1) 브라우저에서 사용자가 로그인 정보를 입력한다.
         - 로그인 정보 : id,password
     - 2) 서버는 로그인 정보를 확인하고, 아이디에 해당하는 memberId를 쿠키에 담아 브라우저에게 반환한다.
     - 3) 브라우저는 받은 쿠키를 쿠키 저장소에 저장한다.
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/240ac47d-0135-4b15-9a1c-318e2d1415b7/Untitled.png)
+    <img width="485" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/68742c95-4177-4370-9f1c-668a6f2ae6f3">
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/96b958e4-55dc-4aeb-a169-ef7e09843978/Untitled.png)
+    <img width="1421" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/ed4bd241-c790-4b74-b93f-e33b7dea1c90">
     
     - 보면, 로그인 후 실제로 쿠키에 memberId가 담겨서 넘어간 것을 확인할 수 있다.
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/12884c24-4158-4ab7-a98a-2c085d62f967/Untitled.png)
+    <img width="1431" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/f26a05f3-e5a8-4b68-8d4f-dfb37e88f9df">
     
     - redirect를 하면, 쿠키가 남아있는걸 볼 수 있다.
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d3f9db4f-2b8e-4b2e-88bd-e7af716ce5b0/Untitled.png)
+    <img width="595" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/be89c01c-9356-4d68-87a9-60db806bacee">
     
     - 여기서도 확인 가능.(이 사람 로그인 정보가 쿠키에 담겼구나!!)
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f257c442-6a3d-4300-a1b0-39247a88e953/Untitled.png)
+    <img width="484" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/0335efd1-cda3-4bb9-a72c-cd7c2183927c">
     
     - 이제 어떤 페이지를 요청하든 도메인안에서는 쿠키 정보를 함께 보내줌
     
@@ -46,7 +46,7 @@
     
     **[LoginController]**
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/855fce0a-aec4-44db-ba9a-42332ed50c1c/Untitled.png)
+    <img width="862" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/5b97ea8d-a024-4169-9076-31315e03a508">
     
     - LoginController 내 login 메서드에서 쿠키 관련 코드를 추가한다.
     - 이때 Cookie Class를 사용한다.
@@ -55,7 +55,7 @@
     
     **[HomeController]**
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f251cbbb-ea74-4da0-a7f9-4e235f0b4b59/Untitled.png)
+    <img width="826" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/78731564-2dfe-4a1f-a5ec-ef99981123a3">
     
     - homeController 내 login-cookie관련 메서드를 추가한다.
     - @CookieValue를 사용하면 편리하게 쿠키를 조회할 수 있다.
@@ -65,7 +65,7 @@
     
     ### 3) 로그아웃
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b524e70d-3487-445e-b7de-7a1479753ec5/Untitled.png)
+    <img width="673" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/77039888-557a-4c98-8d22-36d5e8011845">
     
     - 로그인과 똑같이 HttpServletResponse에 쿠키를 넣어보낼 것
     - 다만 cookie.setMaxAge(0)으로 설정하여 보낼 것.
@@ -79,21 +79,21 @@
 
 ### 1) 세션이 어떻게 동작하나?
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d9005e91-d59a-4368-b22c-1038faa9ae88/Untitled.png)
+<img width="486" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/0f507dae-bf8f-4125-ae2d-3db89b90be86">
 
 - 웹 브라우저에서 로그인을 통해 id와 password가 서버로 전달된다.
 - 서버는 loginId를 회원저장소(DB)와 확인한다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cb589496-3b30-4457-b346-1f895da53306/Untitled.png)
+<img width="484" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/a2343fc7-cb1a-4b32-bee3-b34020aa43f4">
 
 - 확인 후 회원이 맞다면 회원에 해당하는 SessionId를 생성한다.
 - 여기서 세션은 UUID로 생성하는데, 거의 역추적이 불가능한 구조이다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/790bf631-87c3-40e0-bd0c-16dea493d805/Untitled.png)
+<img width="486" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/594f9930-d1f9-48dd-b3c4-bc10bc2ca4e2">
 
 - 이 세션ID를 쿠키에 담아 클라이언트에 반환하고, 클라이언트는 해당 세션ID를 쿠키 저장소에 저장한다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5e6e5706-c601-4348-93e1-fe91b58844e3/Untitled.png)
+<img width="488" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/39e4ff1f-f7c8-4284-a7ab-f34914f56d6f">
 
 - 클라이언트는 요청 시 항상 mySessionId 쿠키를 서버에 함께 전달한다.
 - 서버는 세션Id를 조회한 후, 사용자와 일치하는지 확인하고 응답한다.
@@ -105,9 +105,9 @@
 
 ### [세션 생성]
 
-[SeesionManager]
+**[SeesionManager]**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a4feba92-4008-4cbd-a759-f809e763c0d9/Untitled.png)
+<img width="720" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/039645f2-c2c3-4e49-b6b9-50396bbb3484">
 
 - sessionStore : 세션값 & 멤버정보가 담기는 테이블(Map)
 - UUID.randomUUID().toString()을 하면, 스프링이 자동으로 세션값을 UUID로 생성한다.
@@ -116,17 +116,17 @@
 
 ### [세션 조회]
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/dc6f6302-1584-4d5a-9102-261b1c0cd7f4/Untitled.png)
+<img width="762" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/57908ad9-dff5-4803-b8d9-fe93d9ba777a">
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cba7cd3e-fe30-4bf3-aaf9-30ee1a1782b7/Untitled.png)
+<img width="851" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/5b6d2ebd-8ff3-45f9-bdd1-2d47e02f57e7">
 
 - 세션을 조회하기 위한 getsession 메서드 생성
 - findCookie메서드 만들어서 쿠키 찾는 로직 생성
 
 ### [세션 만료]
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4a2c1d47-2934-4bd6-ba27-8a130026ef72/Untitled.png)
+<img width="796" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/d23f2f2f-718e-4056-9044-6348192a7421">
 
 ### [HomeController]
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/61ea328b-bd7a-40d9-935d-b81ca5955396/Untitled.png)
+<img width="866" alt="Untitled" src="https://github.com/HyemIin/TIL/assets/114489245/c8428748-d13d-425f-beda-3260d87b17d0">
