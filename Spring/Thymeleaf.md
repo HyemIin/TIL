@@ -72,6 +72,12 @@ HTML 컨텐츠 영역에서 직접 출력하기 위해선
 
 - ${user.username} == ${user.getusername()}  이랑 같은 문법이다. 편의 상 전자를 지원한다.
 - `${user['username']}` == ${user.getusername()} 이 것도 같은 문법이다.
+<img width="564" alt="image" src="https://github.com/HyemIin/TIL/assets/114489245/49f111f8-4f99-4869-8323-d13cbda1cd0e">
+    - 위 코드에서 보면, model.addAtribute를 통해 helloData 객체를 뷰에 넘기는 것을 확인 할 수 있다.
+<img width="712" alt="image" src="https://github.com/HyemIin/TIL/assets/114489245/de1d119b-800d-4f11-a9d5-9e099a004fc5">
+    - 그럼 뷰에서는 th:text="${data.name}" 라는 SpringEL 표현식을 활용하여 넘어온 객체의 정보를 나타낼 수 있다.
+    - 위에 적힌 코드는 hellodata 객체에 작성된 name(정혜민)을 나타내기 위한 식이다.
+    - 여기서 짚고 넘어갈 것은, 컨트롤러 내 model.Addattribute에 작성한 attributeName과 타임리프 문법인 th:text="${data.name}" 내 data와 이름이 같아야한다는 점이다.
 
 ## 1) List에서 활용
 
