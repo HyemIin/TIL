@@ -410,7 +410,7 @@ th:field에 있는 값은 item.java에 있는 regions에 담기는 List 값이�
 th:field가 있기 때문에 id를 개발자가 굳이 지정하지 않고도 자동으로 반복문 돌때마다 번호를 붙여주긴 하는데, 문제는 번호만 붙여주지, id 이름이 뭔지는 개발자가 지정해줘야하는 것이다.
 그렇기때문에 th:for=””${#ids.prev(’원하는 아이디 이름’)} 라는 태그를 통해, 아이디 이름을 지정해준다
 - 5) 체크박스를 비활성화하고 싶다면, 아래처럼 태그 끝에 disabled를 추가하면 된다 <br>
-    <input type="checkbox" id="open" th:field="${item.open}" class="form-check-input" disabled>
+    " input type="checkbox" id="open" th:field="${item.open}" class="form-check-input" disabled> "
 
 - 위 코드는 th:field 를 쓴 코드이고, 아래 코드는 안쓴 코드이다. 확연히 위 코드가 간결한 것을 알 수 있다.
 아래 코드의 name, value,th:value 코드가 모두 사라졌기 때문이다.
