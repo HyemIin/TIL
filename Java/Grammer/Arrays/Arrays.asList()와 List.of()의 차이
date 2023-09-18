@@ -1,0 +1,6 @@
+            Array.asList	List.of
+삽입 (add)	          불가능	불가능
+삭제 (remove)	          불가능	불가능
+변경 (set, replace)	   가능	불가능
+Null 허용여부	          허용X	허용X
+각 원소Null 허용여부	   허용	허용X
